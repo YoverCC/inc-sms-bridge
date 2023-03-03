@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Desarrollo Yover\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Desarrollo Yover\\.nuget\\packages"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Controller_SelectedScaffolderID>MvcControllerWithActionsScaffolder</Controller_SelectedScaffolderID>
+    <Controller_SelectedScaffolderCategoryPath>root/Common/MVC/Controller</Controller_SelectedScaffolderCategoryPath>
+    <WebStackScaffolding_ControllerDialogWidth>650.285714285714</WebStackScaffolding_ControllerDialogWidth>
+    <NameOfLastUsedPublishProfile>D:\WorkSpace\Proyectos\CBN\%282022_10_CBN_NNP_270_S_ImplementaciónCXCBO_4483%29\ProyectoFinalSMSFullInfobip\WS.SMSNADRO.IC\WS.SMSNADRO.IC\Properties\PublishProfiles\FolderProfile1.pubxml</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+</Project>

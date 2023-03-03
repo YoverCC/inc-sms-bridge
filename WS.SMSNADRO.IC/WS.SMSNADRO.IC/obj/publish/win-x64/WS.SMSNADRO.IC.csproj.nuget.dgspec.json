@@ -1,0 +1,102 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Proyectos\\CCM\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC.csproj": {}
+  },
+  "projects": {
+    "D:\\Proyectos\\CCM\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Proyectos\\CCM\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC.csproj",
+        "projectName": "WS.SMSNADRO.IC",
+        "projectPath": "D:\\Proyectos\\CCM\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC.csproj",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\CCM\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\WS.SMSNADRO.IC\\obj\\publish\\win-x64\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

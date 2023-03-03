@@ -1,0 +1,107 @@
+USE [BlendingCBN]
+GO
+
+/****** Object:  Table [dbo].[LogEnvioSMS]    Script Date: 3/3/2023 7:53:19 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[LogEnvioSMS](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Telefono] [varchar](50) NULL,
+	[Mensaje] [varchar](max) NULL,
+	[RespuestaAPI] [varchar](max) NULL,
+	[RequestNotiAPI] [varchar](max) NULL,
+	[RequestInboundAPI] [varchar](max) NULL,
+	[messageID] [varchar](max) NULL,
+	[Error] [varchar](max) NULL,
+	[Tipo] [varchar](200) NULL,
+	[TmStmp] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+USE [BlendingCBN]
+GO
+/****** Object:  StoredProcedure [dbo].[spLogReciboSMS]    Script Date: 3/3/2023 8:00:26 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- exec spLogEnvioSMS '5554648589','Hola IPCOM','{}',''
+
+ALTER Procedure [dbo].[spLogReciboSMS](
+  @pTelefono varchar(50),@pMensaje varchar(max), @pRespuestaAPI varchar(max), @pRequestAPI varchar(max), @pError varchar(max), @pTipo varchar(max)
+)
+
+As
+Set NoCount On
+
+	INSERT INTO dbo.LogEnvioSMS (Telefono, Mensaje,RespuestaAPI, RequestInboundAPI, Error ,TmStmp,Tipo)
+										VALUES
+										--(@pTelefono, @xmlOut, @Dato1,GETUTCDATE(),@pSMS)
+										(@pTelefono, @pMensaje,@pRespuestaAPI, @pRequestAPI, @pError,DATEADD(HOUR,-5,GETUTCDATE()),@pTipo)
+
+
+
+SET NOCOUNT OFF
+
+USE [BlendingCBN]
+GO
+/****** Object:  StoredProcedure [dbo].[spLogEnvioSMSNotifiID]    Script Date: 3/3/2023 8:00:24 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- exec [spLogEnvioSMSNotifiID] '5554648589','Hola IPCOM','{}','3333333333333333',''
+
+ALTER Procedure [dbo].[spLogEnvioSMSNotifiID](
+  @pRespuestaAPI varchar(max), @pRequestNotiAPI varchar(max), @pError varchar(max), @pTipo varchar(max)
+)
+
+As
+Set NoCount On
+
+	INSERT INTO dbo.LogEnvioSMS (RespuestaAPI, RequestNotiAPI, Error ,TmStmp, Tipo)
+										VALUES
+										--(@pTelefono, @xmlOut, @Dato1,GETUTCDATE(),@pSMS)
+										(@pRespuestaAPI, @pRequestNotiAPI, @pError,DATEADD(HOUR,-5,GETUTCDATE()),@pTipo)
+
+
+
+SET NOCOUNT OFF
+
+USE [BlendingCBN]
+GO
+/****** Object:  StoredProcedure [dbo].[spLogEnvioSMSID]    Script Date: 3/3/2023 7:54:12 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- exec [spLogEnvioSMSID] '5554648589','Hola IPCOM','{}','3333333333333333',''
+
+ALTER Procedure [dbo].[spLogEnvioSMSID](
+  @pTelefono varchar(50),@pMensaje varchar(max), @pRespuestaAPI varchar(max), @pMessageID varchar(max), @pError varchar(max), @pTipo varchar(max)
+)
+
+As
+Set NoCount On
+
+	INSERT INTO dbo.LogEnvioSMS (Telefono, Mensaje,RespuestaAPI, messageID, Error ,TmStmp,Tipo)
+										VALUES
+										--(@pTelefono, @xmlOut, @Dato1,GETUTCDATE(),@pSMS)
+										(@pTelefono, @pMensaje,@pRespuestaAPI, @pMessageID, @pError,DATEADD(HOUR,-5,GETUTCDATE()),@pTipo)
+
+
+
+SET NOCOUNT OFF
+
+
